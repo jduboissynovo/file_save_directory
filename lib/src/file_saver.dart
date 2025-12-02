@@ -192,14 +192,8 @@ class FileSaveDirectory {
   }
 
   Future<bool> _requestAndroidPermissions(int sdkInt) async {
-    if (sdkInt >= 33) {
-      return true; // Android 13+ doesn't need storage permission for MediaStore
-    } else if (sdkInt >= 30) {
-      var status = await Permission.manageExternalStorage.request();
-      if (!status.isGranted) {
-        status = await Permission.storage.request();
-      }
-      return status.isGranted;
+    if (sdkInt >= 30) {
+      return true; // Doesn't need storage permission for MediaStore
     } else {
       var status = await Permission.storage.request();
       return status.isGranted;
