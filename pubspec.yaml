@@ -1,6 +1,6 @@
 name: file_save_directory
 description: A Flutter plugin for saving files to Downloads, Documents, Music, Videos, or App Documents folders on Android and iOS with enum-based location selection and smart file type detection
-version: 1.0.3+saphir.devinfo13
+version: 1.0.3+saphir.devinfo13.openfile4
 homepage: https://github.com/MohamedMarzouk5/file_save_directory
 
 environment:
@@ -11,7 +11,7 @@ dependencies:
   device_info_plus: ">=12.2.0 <14.0.0"
   flutter:
     sdk: flutter
-  open_file: ^3.5.10
+  open_file: ">=3.5.10 <5.0.0"
   path: ^1.9.1
   path_provider: ^2.1.5
   permission_handler: ^12.0.1
